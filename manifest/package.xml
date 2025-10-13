@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Apex Triggers -->
+    <types>
+        <members>InteractionTrigger</members>
+        <members>PremiumTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+
+    <!-- Apex Classes -->
+    <types>
+        <members>InteractionTriggerHandler</members>
+        <members>PremiumTriggerHandler</members>
+        <members>ContactController</members>
+        <members>InteractionTriggerHandlerTest</members>
+        <members>PremiumTriggerHandlerTest</members>
+        <name>ApexClass</name>
+    </types>
+
+    <version>65.0</version>
+</Package>
