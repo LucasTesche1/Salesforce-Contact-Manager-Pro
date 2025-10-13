@@ -22,6 +22,7 @@
     <!-- LWC Components -->
     <types>
         <members>premiumClientCard</members>
+        <members>demoPremiumClient</members>
         <name>LightningComponentBundle</name>
     </types>
 
