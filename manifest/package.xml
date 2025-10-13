@@ -13,9 +13,16 @@
         <members>InteractionTriggerHandler</members>
         <members>PremiumTriggerHandler</members>
         <members>ContactController</members>
+        <members>PremiumClientController</members>
         <members>InteractionTriggerHandlerTest</members>
         <members>PremiumTriggerHandlerTest</members>
         <name>ApexClass</name>
+    </types>
+
+    <!-- LWC Components -->
+    <types>
+        <members>premiumClientCard</members>
+        <name>LightningComponentBundle</name>
     </types>
 
     <version>65.0</version>
