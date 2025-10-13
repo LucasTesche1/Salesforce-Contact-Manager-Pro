@@ -7,7 +7,7 @@ public without sharing class PremiumClientController {
         }
 
         // Define the base query
-        String baseQuery = 'SELECT Id, Name, Email, VIP__c FROM Contact';
+        String baseQuery = 'SELECT Id, Name, Email, VIP__c, Last_Interaction_Date__c, Level__c FROM Contact';
         
         // Append filter based on whether we received a recordId
         if (contactId != null) {

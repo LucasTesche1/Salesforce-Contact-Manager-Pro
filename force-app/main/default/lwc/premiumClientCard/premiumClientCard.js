@@ -5,16 +5,12 @@ export default class PremiumClientCard extends LightningElement {
     @api recordId;
     @track contact;
 
-    @wire(getContactData, { contactId: '$recordId' })
+    @wire(getContactData, { contactId: '003gK00000EhmkTQAR' })
     wiredContact({ error, data }) {
-        console.log('recordId:', this.recordId);
-        console.log('data:', data);
-        console.log('error:', error);
-
         if (data) {
             this.contact = data;
         } else if (error) {
-            console.error('Apex error:', error);
+            console.error(error);
         }
     }
 }
