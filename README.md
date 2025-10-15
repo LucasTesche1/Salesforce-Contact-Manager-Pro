@@ -39,13 +39,44 @@ O projeto simula um ambiente real de CRM, aplicando boas práticas de desenvolvi
 - Dashboard final que consolida todas as métricas em tempo real.
 
 
-## Tecnologias
+---
 
-- Apex
-- LWC
-- SOQL
-- Flow
-- Salesforce Setup
+## 🧰 Tecnologias e Ferramentas
+
+| Tecnologia | Uso |
+|-------------|-----|
+| **Salesforce Apex** | Lógica backend, triggers e controllers |
+| **LWC (Lightning Web Components)** | Interface moderna e responsiva |
+| **SOQL** | Consultas otimizadas ao banco Salesforce |
+| **Reports & Dashboards** | Análises visuais e métricas de CRM |
+| **Git & GitHub** | Versionamento e colaboração |
+| **Salesforce CLI (sf)** | Deploy e configuração de ambiente |
+
+---
+
+## 🧑‍💻 Autor
+
+**Lucas Tesche**  
+💡 Desenvolvedor Salesforce | Apaixonado por tecnologia, automação e soluções inteligentes.  
+🔗 [linkedin.com/in/lucastesche1](https://linkedin.com/in/lucastesche1)
+
+---
+
+## 📸 Screenshots
+
+<img width="1275" height="817" alt="image" src="https://github.com/user-attachments/assets/c735e2a9-0fdd-4b86-a472-7645251bede5" />
+<img width="870" height="809" alt="image" src="https://github.com/user-attachments/assets/2790194e-1730-43d2-8d18-fb1e2870e25e" />
+<img width="430" height="569" alt="image" src="https://github.com/user-attachments/assets/e2f31b1c-fdb7-4486-bbf5-2ca49c50ccc6" />
+
+
+---
+
+## ⚡ Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/LucasTesche1/Salesforce-Contact-Manager-Pro.git
+
 
 
 
