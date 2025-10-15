@@ -63,8 +63,11 @@ O projeto simula um ambiente real de CRM, aplicando boas práticas de desenvolvi
 ---
 
 ## 📸 Screenshots
-
-<img width="1275" height="817" alt="image" src="https://github.com/user-attachments/assets/c735e2a9-0fdd-4b86-a472-7645251bede5" />
+<div style="padding:5px, display:column">
+<img width="1902" height="856" alt="{2FF1C975-A88B-4BE2-AD12-BF6B4EE8FDB4}" src="https://github.com/user-attachments/assets/86d3939b-2ff0-4d30-8e06-2f360929e7a7" />
+<img width="1905" height="411" alt="{3D67319E-9A5E-406D-B8FB-166200251236}" src="https://github.com/user-attachments/assets/3f1bddf1-8539-4cb6-bde1-d0219af28b7a" />
+<img width="1918" height="855" alt="{BA33EEDA-3B96-42B2-8FF5-332FA5831A11}" src="https://github.com/user-attachments/assets/06f6c564-b308-4af0-8135-ebd7e9d5bd89" />
+</div>
 <img width="870" height="809" alt="image" src="https://github.com/user-attachments/assets/2790194e-1730-43d2-8d18-fb1e2870e25e" />
 <img width="430" height="569" alt="image" src="https://github.com/user-attachments/assets/e2f31b1c-fdb7-4486-bbf5-2ca49c50ccc6" />
 
