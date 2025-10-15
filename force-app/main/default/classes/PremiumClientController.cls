@@ -1,21 +1,11 @@
-public without sharing class PremiumClientController {
+public with sharing class PremiumClientController {
     @AuraEnabled(cacheable=true)
-    public static Contact getContactData(Id contactId) {
-        // Check if the running user has read access to Contact
-        if (!Schema.sObjectType.Contact.isAccessible()) {
-            throw new AuraHandledException('You do not have access to Contact records.');
-        }
-
-        // Define the base query
-        String baseQuery = 'SELECT Id, Name, Email, VIP__c, Last_Interaction_Date__c, Level__c FROM Contact';
-        
-        // Append filter based on whether we received a recordId
-        if (contactId != null) {
-            baseQuery += ' WHERE Id = :contactId LIMIT 1';
-            return Database.query(baseQuery);
-        } else {
-            baseQuery += ' LIMIT 1';
-            return Database.query(baseQuery);
-        }
+    public static List<Contact> getContactData() {
+        return [
+            SELECT Id, Name, Email, VIP__c, Level__c, Last_Interaction_Date__c
+            FROM Contact
+            WHERE VIP__c = TRUE
+            LIMIT 10
+        ];
     }
 }

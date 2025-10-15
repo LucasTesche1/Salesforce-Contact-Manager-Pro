@@ -2,15 +2,16 @@ import { LightningElement, api, wire, track } from 'lwc';
 import getContactData from '@salesforce/apex/PremiumClientController.getContactData';
 
 export default class PremiumClientCard extends LightningElement {
-    @api recordId;
-    @track contact;
+    @track contacts = [];
 
-    @wire(getContactData, { contactId: '003gK00000EhmkTQAR' })
-    wiredContact({ error, data }) {
-        if (data) {
-            this.contact = data;
-        } else if (error) {
-            console.error(error);
+    @wire(getContactData)
+    wiredContacts({error, data}){
+        if(data){
+            this.contacts = data;
+            console.log('Contatos retornados:', JSON.stringify(this.contacts))
+        }
+        else if (error){
+            console.error('Erro ao buscar contatos:' + error);
         }
     }
 }

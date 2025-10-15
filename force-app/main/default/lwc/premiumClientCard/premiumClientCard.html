@@ -1,58 +1,58 @@
 <template>
-    <lightning-card title="Premium Client Info" icon-name="standard:contact">
-        <div class="slds-p-around_small">
-            <template if:true={contact}>
-                
-                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-border_bottom slds-p-bottom_small slds-m-bottom_small">
-                    
-                    <div class="slds-col slds-grow slds-has-flexi-truncate"> 
-                        <strong class="slds-text-heading_small slds-truncate" title={contact.Name}>
-                            {contact.Name}
-                        </strong>
-                    </div>
-                    <template if:true={contact.VIP__c}>
-                        <lightning-badge label="VIP" variant="success" class="slds-m-left_x-small slds-no-flex"></lightning-badge>
-                    </template>
+    <template if:true={contacts}>
+        <div class="slds-grid slds-wrap slds-p-around_medium slds-grid_pull-padded">
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_small">
+                    <lightning-card 
+                        title="Premium Client Info" 
+                        icon-name="standard:contact"
+                        class="slds-hint-parent"
+                    >
+                        <div class="slds-p-around_small">
+
+                            <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-border_bottom slds-p-bottom_small slds-m-bottom_small">
+                                <div class="slds-col slds-grow slds-has-flexi-truncate"> 
+                                    <strong class="slds-text-heading_small slds-truncate" title={contact.Name}>
+                                        {contact.Name}
+                                    </strong>
+                                </div>
+                                <template if:true={contact.VIP__c}>
+                                    <lightning-badge label="VIP" variant="success" class="slds-m-left_x-small slds-no-flex"></lightning-badge>
+                                </template>
+                            </div>
+
+                            <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-grid_vertical">
+
+                                <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
+                                    <lightning-icon icon-name="standard:email" size="small" class="slds-m-right_x-small"></lightning-icon>
+                                    <strong>Email:</strong> 
+                                    <span class="slds-truncate slds-m-left_x-small" title={contact.Email}>{contact.Email}</span>
+                                </div>
+
+                                <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
+                                    <lightning-icon icon-name="standard:work_order" size="small" class="slds-m-right_x-small"></lightning-icon>
+                                    <strong>Contact Level:</strong>
+                                    <lightning-badge label={contact.Level__c} variant="inverse" class="slds-m-left_x-small"></lightning-badge>
+                                </div>
+
+                                <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
+                                    <lightning-icon icon-name="standard:event" size="small" class="slds-m-right_x-small"></lightning-icon>
+                                    <strong>Last Interaction:</strong>
+                                    <span class="slds-truncate slds-m-left_x-small" title={contact.Last_Interaction_Date__c}>{contact.Last_Interaction_Date__c}</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </lightning-card>
                 </div>
-                
-                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-grid_vertical">
-
-                    <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
-                        <div class="slds-grid slds-grid_align-start slds-col slds-size_fixed-none">
-                            <lightning-icon icon-name="standard:email" size="small" class="slds-m-right_x-small"></lightning-icon>
-                            <strong>Email:</strong> 
-                        </div>
-                        <div class="slds-col slds-grow slds-has-flexi-truncate slds-m-left_x-small"> 
-                            <span class="slds-truncate" title={contact.Email}>{contact.Email}</span>
-                        </div>
-                    </div>
-
-                    <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
-                        <div class="slds-grid slds-grid_align-start slds-col slds-size_fixed-none">
-                            <lightning-icon icon-name="standard:email" size="small" class="slds-m-right_x-small"></lightning-icon>
-                            <strong>Contact Level:</strong>
-                        </div>
-                        <div class="slds-col slds-grow slds-has-flexi-truncate slds-m-left_x-small">
-                            <lightning-badge label={contact.Level__c} variant="inverse"></lightning-badge>
-                        </div>
-                    </div>
-
-                    <div class="slds-col slds-size_12-of-12 slds-m-bottom_small slds-grid slds-wrap slds-grid_vertical-align-center">
-                        <div class="slds-grid slds-grid_align-start slds-col slds-size_fixed-none">
-                            <lightning-icon icon-name="standard:event" size="small" class="slds-m-right_x-small"></lightning-icon>
-                            <strong>Last Interaction:</strong>
-                        </div>
-                        <div class="slds-col slds-grow slds-has-flexi-truncate slds-m-left_x-small"> 
-                            <span class="slds-truncate" title={contact.Last_Interaction_Date__c}>{contact.Last_Interaction_Date__c}</span>
-                        </div>
-                    </div>
-
-                </div>
-            </template>
-
-            <template if:false={contact}>
-                <p>Loading...</p>
             </template>
         </div>
-    </lightning-card>
+    </template>
+
+    <template if:false={contacts}>
+        <div class="slds-p-around_medium slds-align_absolute-center">
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </div>
+    </template>
+    
 </template>
